@@ -1,0 +1,371 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: CPU_2214.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU_2214.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU_2214"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : CPU_2214
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/or_gate.vhd" into library work
+Parsing entity <or_gate>.
+Parsing architecture <behavior> of entity <or_gate>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/MUX31.vhd" into library work
+Parsing entity <MUX31>.
+Parsing architecture <Behavioral> of entity <mux31>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/full_adder.vhd" into library work
+Parsing entity <full_adder>.
+Parsing architecture <behavior> of entity <full_adder>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/and_gate.vhd" into library work
+Parsing entity <and_gate>.
+Parsing architecture <behavior> of entity <and_gate>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <behavior> of entity <alu>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/Signextend.vhd" into library work
+Parsing entity <Signextend>.
+Parsing architecture <syn> of entity <signextend>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/Registers.vhd" into library work
+Parsing entity <Registers>.
+Parsing architecture <syn> of entity <registers>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/PC_REG.vhd" into library work
+Parsing entity <PC_REG>.
+Parsing architecture <Behavioral> of entity <pc_reg>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/mux3_1.vhd" into library work
+Parsing entity <mux3_1>.
+Parsing architecture <Behavioral> of entity <mux3_1>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/mux2_1.vhd" into library work
+Parsing entity <mux2_1>.
+Parsing architecture <Behavioral> of entity <mux2_1>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/Memory.vhd" into library work
+Parsing entity <Memory>.
+Parsing architecture <beh> of entity <memory>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/Control.vhd" into library work
+Parsing entity <Control>.
+Parsing architecture <syn> of entity <control>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/ALU_16Bit.vhd" into library work
+Parsing entity <ALU_16Bit>.
+Parsing architecture <behavior> of entity <alu_16bit>.
+Parsing VHDL file "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" into library work
+Parsing entity <CPU_2214>.
+Parsing architecture <Behavioral> of entity <cpu_2214>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <CPU_2214> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PC_REG> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Memory> (architecture <beh>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "C:/Users/joqes/Desktop/Template/Memory.vhd" Line 101: write_en should be on the sensitivity list of the process
+
+Elaborating entity <Control> (architecture <syn>) from library <work>.
+
+Elaborating entity <Registers> (architecture <syn>) from library <work>.
+
+Elaborating entity <Signextend> (architecture <syn>) from library <work>.
+
+Elaborating entity <mux2_1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <mux2_1> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ALU_16Bit> (architecture <behavior>) from library <work>.
+
+Elaborating entity <ALU> (architecture <behavior>) from library <work>.
+
+Elaborating entity <full_adder> (architecture <behavior>) from library <work>.
+
+Elaborating entity <and_gate> (architecture <behavior>) from library <work>.
+
+Elaborating entity <or_gate> (architecture <behavior>) from library <work>.
+
+Elaborating entity <MUX31> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Memory> (architecture <beh>) with generics from library <work>.
+
+Elaborating entity <mux3_1> (architecture <Behavioral>) with generics from library <work>.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 147. All outputs of instance <CPU_PC> of block <PC_REG> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 156. All outputs of instance <CPU_Instr_MEM> of block <Memory> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 175. All outputs of instance <CPU_Control_0> of block <Control> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 186. All outputs of instance <CPU_Registers_0> of block <Registers> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 198. All outputs of instance <CPU_signextend_0> of block <Signextend> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 203. All outputs of instance <CPU_reg_dest_mux> of block <mux2_1> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 213. All outputs of instance <CPU_alu_src_mux> of block <mux2_1> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 220. All outputs of instance <CPU_ALU_0> of block <ALU_16Bit> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 233. All outputs of instance <CPU_MEM_0> of block <Memory> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 249. All outputs of instance <CPU_reg_src_mux> of block <mux3_1> are unconnected in block <CPU_2214>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CPU_2214>.
+    Related source file is "C:/Users/joqes/Desktop/Template/CPU_2214.vhd".
+WARNING:Xst:647 - Input <mem_dump> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Users/joqes/Desktop/Template/CPU_2214.vhd" line 220: Output port <Cout> of the instance <CPU_ALU_0> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <CPU_2214> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:/Users/joqes/Desktop/Template/ALU.vhd".
+    Summary:
+	no macro.
+Unit <ALU> synthesized.
+
+Synthesizing Unit <full_adder>.
+    Related source file is "C:/Users/joqes/Desktop/Template/full_adder.vhd".
+    Summary:
+Unit <full_adder> synthesized.
+
+Synthesizing Unit <and_gate>.
+    Related source file is "C:/Users/joqes/Desktop/Template/and_gate.vhd".
+    Summary:
+	no macro.
+Unit <and_gate> synthesized.
+
+Synthesizing Unit <or_gate>.
+    Related source file is "C:/Users/joqes/Desktop/Template/or_gate.vhd".
+    Summary:
+	no macro.
+Unit <or_gate> synthesized.
+
+Synthesizing Unit <MUX31>.
+    Related source file is "C:/Users/joqes/Desktop/Template/MUX31.vhd".
+    Found 1-bit 3-to-1 multiplexer for signal <Sout_Input1_MUX_99_o> created at line 17.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <MUX31> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <CPU_2214> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU_2214, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CPU_2214.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   0  out of    210     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.86 secs
+ 
+--> 
+
+Total memory usage is 4625080 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

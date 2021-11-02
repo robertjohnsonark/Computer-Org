@@ -1,0 +1,35 @@
+Command line:
+   CPU_2214_Test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56804
+
+Mon Apr 13 18:16:43 2020
+
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 5483.54 Meg
+
+ Total Signals          : 511
+ Total Nets             : 1124
+ Total Signal Drivers   : 138
+ Total Blocks           : 96
+ Total Primitive Blocks : 77
+ Total Processes        : 132
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 1536
+Total Line Count : 240
+Total Line Count : 240
+In process Memory.vhd:read_p 
+ 
+Total Line Count : 240
+In process Memory.vhd:read_p 
+ 
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 4697.11 Meg
+
+Mon Apr 13 18:33:55 2020
+

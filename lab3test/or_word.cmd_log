@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "F:/school/computerorg/lab3test/or_word.xst" -ofn "F:/school/computerorg/lab3test/or_word.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 or_word.ngc or_word.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o or_word_map.ncd or_word.ngd or_word.pcf 
+par -w -intstyle ise -ol high -mt off or_word_map.ncd or_word.ncd or_word.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml or_word.twx or_word.ncd -o or_word.twr or_word.pcf 
